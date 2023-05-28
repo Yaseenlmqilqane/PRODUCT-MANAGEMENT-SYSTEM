@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <h1>crud</h1>
+            <p>Product management System</p>
+        </div>
+        <div class="center">
+            <input id="title" type="text" placeholder="Title">
+            <div class="price">
+                <input onkeyup="calcPrice()" id="price" type="number" placeholder="Price">
+                <input onkeyup="calcPrice()" id="taxes" type="number" placeholder="Taxes">
+                <input onkeyup="calcPrice()" id="ads" type="number" placeholder="Ads">
+                <input onkeyup="calcPrice()" id="discount" type="number" placeholder="Discount">
+                <small id="total"></small>
+            </div>
+            <input id="count" type="number" placeholder="Count">
+            <input id="category" type="text" placeholder="Category">
+            <button id="createBtn">Create</button>
+        </div>
+        <div class="bottom">
+            <input onkeyup="searchPro(this.value)" id="search" type="text" placeholder="Search">
+            <div class="searchBtn">
+                <button onclick="getSearchMood(this.id)" id="searchByTitle">Search By Title</button>
+                <button onclick="getSearchMood(this.id)" id="searchByCat">Search By Category</button>
+            </div>
+            <div id="deleteAll-btn">
+
+            </div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>category</th>
+                    <th>total</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <!-- ------------------------------- -->
+                <tbody id="tab">
+                    <!-- <td>ID</td>
+                    <td>Title</td>
+                    <td>price</td>
+                    <td>taxes</td>
+                    <td>ads</td>
+                    <td>discount</td>
+                    <td>category</td>
+                    <td>total</td>
+                    <td><button id="update">Update</button></td>
+                    <td><button id="delete">Delete</button></td> -->
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <div class="myAlert">
+        <i class="fa-sharp fa-solid fa-triangle-exclamation icon"></i>
+        <p class="info"></p>
+        <span id="closeBtn" onclick="hideAlert()">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+        </span>
+    </div>
+
+    <script src="Product.js"></script>
+</body>
+
+</html>

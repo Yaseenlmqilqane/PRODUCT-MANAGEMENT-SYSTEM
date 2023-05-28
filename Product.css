@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #333;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container {
+    width: 1200px;
+    margin: auto;
+}
+.top {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.center input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 4px;
+}
+input:focus {
+    background-color: #111;
+    transform: scale(1.1);
+}
+.center .price input {
+    width: 20%;
+}
+#total {
+    background-color: #910707;
+    padding: 8px 5px;
+    border-radius: 4px;
+}
+#total::before {
+    content: "Total: ";
+}
+button {
+    width: calc(100% + 25px);
+    padding: 10px;
+    background: rgb(100, 7, 100);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    transition: .4s;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(120, 4, 120);
+    letter-spacing: 1.5px;
+}
+.bottom input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 4px;
+}
+.searchBtn {
+    display: flex;
+    gap: 10px;
+    width: calc(100% + 25px);
+}
+.bottom table {
+    width: calc(100% + 25px);
+    text-align: center;
+    margin: 5px 0;
+}
+.bottom table button {
+    letter-spacing: normal;
+}
+.bottom table th {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+.bottom table button {
+    width: 90%;
+}
+
+.myAlert {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    position: fixed;
+    top: -200px;
+    right: 10px;
+    background-color: rgb(250, 211, 211);
+    text-align: center;
+    color: #910707;
+    transition: all .5s;
+    border-left: #910707 solid 10px;
+}
+.myAlert .icon {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #ee9292;
+    border-radius: 50%;
+    margin: 10px;
+}
+.myAlert p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.myAlert span {
+    cursor: pointer;
+    height: 100%;
+    background-color: #910707;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-left: 10px;
+}
+.myAlert span i {
+    font-size: 15px;
+}
+
+.hide {
+    display: none;
+}
